@@ -1,0 +1,43 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+        <action name="hello" class="example.lproperty" method="print">
+            <result name="success">/design/homepage.jsp</result>
+        </action>
+        
+       <action name="userinsert" class="example.lproperty" method="user">
+            <result name="inserted">/design/user.jsp</result>
+        </action>
+        
+        <action name="adminhome" class="example.lproperty" method="print">
+            <result name="success">/design/adminhome.jsp</result>
+        </action>
+        
+        <action name="homepage" class="example.lproperty" method="print">
+            <result name="success">/design/homepage.jsp</result>
+        </action>
+        
+        <action name="login" class="example.lproperty" method="print">
+            <result name="success">/design/login.jsp</result>
+        </action>
+        
+        <action name="category" class="example.lproperty" method="print">
+            <result name="success">/design/item_category.jsp</result>
+        </action>
+        
+        <action name="category" class="example.CategoryAction" method="saveCategory">
+            <result name="success">/design/item_category.jsp</result>
+        </action>
+        
+        <action name="item" class="example.category" method="iteminsert">
+            <result name="iteminserted">/design/item_list.jsp</result>
+        </action>
+        
+    </package>
+</struts>
